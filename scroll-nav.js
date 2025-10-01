@@ -11,4 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+    
+    
+
 });
+
+  let AboutMeDesc = document.getElementById("about-me-description").innerText;
+
+var typed = new Typed("#typed", {  
+    strings: [AboutMeDesc],
+    typeSpeed: 20,
+    backSpeed: 30,
+    loop: false,
+    
+  });

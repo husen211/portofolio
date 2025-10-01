@@ -120,6 +120,47 @@ nav {
     box-shadow: 0 10px 30px rgba(199, 125, 255, 0.3);
 }
 
+/* About Section */
+ .about-me-title{
+    text-align: center;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #c77dff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+ }
+
+
+.about-content{
+    border-radius: 30px;
+    background-color: #221031;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.about-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#about-me-description {
+    display: none;
+    
+}
+
+#typed {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgb(202, 137, 255);
+    font-weight: 400;
+    
+}
 /* Hero Section */
 .hero {
     padding: 120px 5% 80px;
@@ -372,6 +413,9 @@ h1 {
     margin-bottom: 15px;
     color: #fff;
 }
+.service-card .mentor-name {
+    color: #ff6ec7;
+}
 
 .service-card p {
     font-size: 15px;
@@ -468,7 +512,7 @@ h1 {
 }
 
 .project-content {
-    padding: 30px;
+    padding: 25px;
 }
 
 .project-category {
