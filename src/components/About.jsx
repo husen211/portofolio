@@ -58,7 +58,7 @@ export default function About() {
         </div>
         <div className="w-full md:w-2/3">
           <p className="text-xl md:text-xl leading-relaxed text-gray-800 font-normal">
-            I am a <strong>Fullstack Web Developer</strong> and Product Builder who creates real-world digital products with measurable business impact. 
+            I am a <strong>Frontend Developer</strong> and Product Builder who creates real-world digital products with measurable business impact. 
             I don't just write code; I think about product structure, design quality, and how systems support actual operations. 
             I am highly proficient in modern frontend development using <strong>React.js</strong>, while being equally comfortable designing data structures, <strong>API contracts</strong>, and <strong>backend business logic</strong> using <strong>Node.js</strong> and <strong>Laravel</strong>.
           </p>

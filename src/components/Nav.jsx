@@ -26,8 +26,8 @@ export default function Nav() {
               <span className="hidden sm:inline">Back</span>
             </button>
           )}
-          <Link to="/" className="text-sm font-bold tracking-tight text-black relative">
-            HUSEIN ALJUFRI.
+          <Link to="/" className="text-2xl font-bold tracking-tight text-black relative">
+            HUSEIN.
           </Link>
         </div>
 
@@ -35,7 +35,7 @@ export default function Nav() {
         <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 bg-gray-50/80 px-6 py-2 rounded-full border border-gray-200">
           <Link to="/projects" className="text-sm font-semibold text-gray-500 hover:text-black transition-colors">Work</Link>
           <Link to="/about" className="text-sm font-semibold text-gray-500 hover:text-black transition-colors">About</Link>
-          <Link to="/blog" className="text-sm font-semibold text-gray-500 hover:text-black transition-colors">Blog</Link>
+          <Link to="/journal" className="text-sm font-semibold text-gray-500 hover:text-black transition-colors">Journal</Link>
         </div>
 
         {/* Right Section */}
@@ -81,7 +81,7 @@ export default function Nav() {
           >
             <Link to="/projects" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-black">Work</Link>
             <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-black">About</Link>
-            <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-black">Blog</Link>
+            <Link to="/journal" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-black">Journal</Link>
             
             <div className="flex items-center gap-6 pt-4 border-t border-gray-100 mt-2">
               <a href="https://github.com/husein211" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-black transition-colors">

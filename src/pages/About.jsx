@@ -1,10 +1,36 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaReact, FaNodeJs, FaGitAlt, FaHtml5, FaFigma } from 'react-icons/fa';
+import { SiTailwindcss, SiJavascript, SiLaravel, SiMysql, SiMongodb, SiExpress } from 'react-icons/si';
 
 const revealVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
 };
+
+const skillCategories = [
+  {
+    title: "Frontend Development",
+    skills: [
+      { name: "React.js", icon: <FaReact className="w-4 h-4 text-blue-500" /> },
+      { name: "JavaScript", icon: <SiJavascript className="w-4 h-4 text-yellow-500" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="w-4 h-4 text-cyan-500" /> },
+      { name: "HTML/CSS", icon: <FaHtml5 className="w-4 h-4 text-orange-500" /> },
+      { name: "Figma (UI/UX)", icon: <FaFigma className="w-4 h-4 text-purple-500" /> }
+    ]
+  },
+  {
+    title: "Backend & Database",
+    skills: [
+      { name: "Node.js", icon: <FaNodeJs className="w-4 h-4 text-green-600" /> },
+      { name: "Express.js", icon: <SiExpress className="w-4 h-4 text-gray-700" /> },
+      { name: "Laravel", icon: <SiLaravel className="w-4 h-4 text-red-600" /> },
+      { name: "MySQL", icon: <SiMysql className="w-4 h-4 text-blue-700" /> },
+      { name: "MongoDB", icon: <SiMongodb className="w-4 h-4 text-green-500" /> },
+      { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-orange-600" /> }
+    ]
+  }
+];
 
 export default function About() {
   return (
@@ -14,7 +40,7 @@ export default function About() {
       </motion.div>
       
       <motion.div initial="hidden" animate="visible" variants={revealVariants} className="text-xl md:text-2xl leading-relaxed font-medium text-gray-800 space-y-6 max-w-3xl mb-24">
-        <p>I am Husein Aljufri, a Computer Science student with a focus on <strong>Fullstack Web Development</strong>.</p>
+        <p>I am Husein, a Computer Science student with a focus on <strong>Frontend Engineering and Fullstack Development</strong>.</p>
         <p>Experienced in building web applications based on real-world needs and developing digital solutions to support <strong>business operations</strong>. I am adaptable to new technologies, with strong problem-solving skills across both <strong>Frontend (React)</strong> and <strong>Backend (Node.js, Laravel)</strong>.</p>
       </motion.div>
 
@@ -38,7 +64,7 @@ export default function About() {
               </ul>
               <div className="mt-4 p-4 bg-gray-50 rounded-xl">
                 <p className="font-medium text-black">Key Achievements:</p>
-                <p className="text-gray-600 mt-1">Generated ~Rp500,000,000 revenue in the first 3 months. Digital content reached 1,000,000+ views.</p>
+                <p className="text-gray-600 mt-1">Generated ~Rp580,000,000 revenue in the first 3 months. Digital content reached 1,000,000+ views.</p>
               </div>
             </div>
           </div>
@@ -49,20 +75,28 @@ export default function About() {
       <div className="mb-32">
         <h2 className="text-3xl font-medium tracking-tight mb-8">Skills & Expertise</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-gray-200 pt-8">
-          <div>
-            <h4 className="text-xl font-medium mb-4">Frontend & Development</h4>
-            <div className="flex flex-wrap gap-2">
-              {['React.js', 'HTML/CSS', 'JavaScript', 'Tailwind CSS', 'Laravel', 'MySQL (CRUD, MVC)', 'Git', 'Figma (UI/UX)'].map(skill => (
-                <span key={skill} className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium">{skill}</span>
-              ))}
+          
+          {skillCategories.map((cat, idx) => (
+            <div key={idx}>
+              <h4 className="text-xl font-medium mb-4">{cat.title}</h4>
+              <div className="flex flex-wrap gap-3">
+                {cat.skills.map(skill => (
+                  <span key={skill.name} className="flex items-center gap-2 px-4 py-2 bg-gray-50 border border-gray-200 rounded-full text-sm font-medium text-gray-800 hover:shadow-md transition-shadow">
+                    {skill.icon}
+                    {skill.name}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <h4 className="text-xl font-medium mb-4">Soft Skills</h4>
-            <ul className="space-y-2 text-lg text-gray-800 list-disc list-inside">
+          ))}
+
+          <div className="md:col-span-2">
+            <h4 className="text-xl font-medium mb-4">Soft Skills & Beyond</h4>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-lg text-gray-800 list-disc list-inside">
               <li>Project-based Problem Solving</li>
               <li>Self-learning & Adaptability</li>
               <li>Time Management & Responsibility</li>
+              <li>Business & Product Thinking</li>
             </ul>
           </div>
         </div>

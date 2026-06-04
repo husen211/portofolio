@@ -1,18 +1,20 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import VideoReel from '../components/VideoReel';
 import ToolsMarquee from '../components/ToolsMarquee';
+import Competencies from '../components/Competencies';
 import FeaturedWork from '../components/FeaturedWork';
 import About from '../components/About';
+import BlogTeaser from '../components/BlogTeaser';
 
 export default function Home() {
   return (
     <main className="w-full overflow-hidden">
       <Hero />
-      {/* <VideoReel /> */}
       <ToolsMarquee />
+      <Competencies />
       <FeaturedWork />
       <About />
+      <BlogTeaser />
     </main>
   );
 }
