@@ -27,7 +27,7 @@ export default function Hero() {
       >
         <div className="w-full h-full rounded-none overflow-hidden rotate-[-8deg] shadow-2xl transition-transform duration-700 hover:rotate-0 bg-gray-100">
           <img
-            src="/public/image/hero.png"
+            src="/image/hero.png"
             alt="Hero Image"
             className="w-full h-full object-cover"
           />
