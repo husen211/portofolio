@@ -47,7 +47,7 @@ export default function Hero() {
         </h1>
         <div className="text-xl md:text-2xl leading-relaxed font-medium text-[#0e0e0e] space-y-4 mt-4">
           <p>
-            Currently building and managing digital operations for <a href="https://www.linkedin.com/company/qammaris-perfumes/?viewAsMember=true" target="_blank" rel="noreferrer" className="text-black font-semibold border-b-2 border-black/20 hover:border-black transition-colors pb-0.5 ml-1">Qammaris Perfumes</a>.
+            Currently building and managing digital operations for <a href="https://www.linkedin.com/company/qammaris-perfumes/" target="_blank" rel="noreferrer" className="text-black font-semibold border-b-2 border-black/20 hover:border-black transition-colors pb-0.5 ml-1">Qammaris Perfumes</a>.
           </p>
           <p className="text-gray-500 font-normal text-lg md:text-xl">
             I focus on bridging the gap between frontend interfaces and backend logic, ensuring that every line of code serves a real-world business purpose. From designing intuitive UIs to engineering robust APIs, I love bringing ideas to life.
