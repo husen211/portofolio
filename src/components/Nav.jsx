@@ -1,24 +1,14 @@
 import React, { useState } from 'react';
-import { Copy, Menu, X, ArrowLeft } from 'lucide-react';
+import { Menu, X, ArrowLeft, Github, Linkedin, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Nav() {
-  const [copied, setCopied] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === '/';
-
-  const email = "huseinaljufri4@gmail.com";
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(email).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-gray-100 transition-all duration-300">
@@ -48,15 +38,26 @@ export default function Nav() {
         </div>
 
         {/* Right Section */}
-        <div className="flex items-center gap-4 z-20">
-          {/* Email Button Desktop */}
-          <button 
-            onClick={handleCopyEmail}
+        <div className="flex items-center gap-6 z-20">
+          
+          {/* Social Icons Desktop */}
+          <div className="hidden md:flex items-center gap-4 border-r border-gray-200 pr-6">
+            <a href="https://github.com/husein211" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-black transition-colors">
+              <Github className="w-5 h-5" />
+            </a>
+            <a href="https://www.linkedin.com/in/husein-aljufri/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors">
+              <Linkedin className="w-5 h-5" />
+            </a>
+          </div>
+
+          {/* Email Button Desktop (Mailto) */}
+          <a 
+            href="mailto:huseinaljufri4@gmail.com"
             className="hidden md:flex group items-center gap-2 bg-[#0e0e0e] text-white px-5 py-2.5 rounded-full hover:scale-105 transition-transform active:scale-95 text-sm font-medium"
           >
-            <span className="email-text">{copied ? "Email copied!" : email}</span>
-            <Copy className="w-4 h-4 text-white/70" />
-          </button>
+            <span>Say Hello</span>
+            <Mail className="w-4 h-4 text-white/70" />
+          </a>
 
           {/* Mobile Menu Toggle */}
           <button 
@@ -80,13 +81,23 @@ export default function Nav() {
             <Link to="/projects" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-black">Work</Link>
             <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-black">About</Link>
             <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-black">Blog</Link>
-            <button 
-              onClick={handleCopyEmail}
-              className="w-full flex justify-center items-center gap-2 bg-[#0e0e0e] text-white px-5 py-3 rounded-xl hover:scale-105 transition-transform active:scale-95 text-sm font-medium mt-4"
+            
+            <div className="flex items-center gap-6 pt-4 border-t border-gray-100 mt-2">
+              <a href="https://github.com/husein211" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-black transition-colors">
+                <Github className="w-6 h-6" />
+              </a>
+              <a href="https://www.linkedin.com/in/husein-aljufri/" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-blue-600 transition-colors">
+                <Linkedin className="w-6 h-6" />
+              </a>
+            </div>
+
+            <a 
+              href="mailto:huseinaljufri4@gmail.com"
+              className="w-full flex justify-center items-center gap-2 bg-[#0e0e0e] text-white px-5 py-3 rounded-xl hover:scale-105 transition-transform active:scale-95 text-sm font-medium mt-2"
             >
-              <span className="email-text">{copied ? "Email copied!" : email}</span>
-              <Copy className="w-4 h-4 text-white/70" />
-            </button>
+              <span>Say Hello</span>
+              <Mail className="w-4 h-4 text-white/70" />
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

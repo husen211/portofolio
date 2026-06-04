@@ -12,7 +12,7 @@ const revealVariants = {
 
 const experience = [
   {
-    year: "2023 – Present",
+    year: "2026 – Present",
     title: "Qammaris Perfumes, Founder & Tech Lead.",
     location: "Palu, Indonesia",
     description: "Built a retail perfume business from the ground up, developing a complete digital commerce system in Laravel & React to support store operations, product management, and automated checkout flows."
@@ -24,7 +24,7 @@ const experience = [
     description: "Focusing on Software Engineering while building real-world projects. Active member of BNCC Frontend Learning Track."
   },
   {
-    year: "2023",
+    year: "2024",
     title: "Freelance, Frontend Developer.",
     location: "Remote",
     description: "Developed various landing pages and UI/UX prototypes including BEEP Emergency Keychain and Finance Monitoring Systems."
